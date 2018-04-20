@@ -87,4 +87,7 @@ From datasets.yelp_business
 group by state
 ```
 
+## Description of datasets.yelp_user
+This table includes information describing Yelp users such as. Their name, since when 
+
 
