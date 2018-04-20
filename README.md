@@ -115,6 +115,20 @@ limit 10
 
 ![An-analysis-of-yelp_business](Group6Visualizations/q9.png)
 
+## Description of datasets.yelp_checkin
+This table includes the amount of check-ins each business has and when that check-in was. Check-ins are offer rewards that businesses give customers they “check-in” to the business on Yelp. By using the check-in feature on the Yelp, customers broadcast to their friends on Yelp that they're at your business.
+
+## Quesition #10
+
+```sql
+SELECT business_id,
+count (checkins) as check_in
+from datasets.yelp_checkin
+group by business_id
+order by check_in DESC
+limit 5
+```
+
 
 
 
