@@ -88,6 +88,36 @@ group by state
 ```
 
 ## Description of datasets.yelp_user
-This table includes information describing Yelp users such as. Their name, since when 
+This table includes information describing Yelp users such as, their name, when they joined yelp, how many reviews they have written and characteristics of the reviews.
+
+## Question #8
+How many people joined yelp over the course of the year 2017?
+
+```sql
+SELECT count(name) as count_name, yelping_since
+from datasets.yelp_user
+where yelping_since between '2017-01-01' and '2017-12-31'
+group by yelping_since
+order by yelping_since ASC
+```
+
+![An-analysis-of-yelp_business](Group6Visualizations/q8.png)
+
+## Question #9 
+Who are the top 10 users wrote the most reviews?
+
+```sql
+ SELECT review_count, name
+FROM datasets.yelp_user
+order by review_count DESC 
+limit 10
+```
+
+![An-analysis-of-yelp_business](Group6Visualizations/q9.png)
+
+
+
+
+
 
 
