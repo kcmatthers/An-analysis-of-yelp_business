@@ -7,6 +7,14 @@ This table includes various data gathered on Yelp including users, reviews, rati
 ## Question #1
 What are the top 5 states with the most 5 star businesses? 
 
+```sql
+Select count(stars) as count_of_5_stars, state
+From datasets.yelp_business
+where stars = 5
+group by state
+order by count_of_5_stars DESC
+```
+
 ![An-analysis-of-yelp_business](Group6Visualizations/q1)
 
 
