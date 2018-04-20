@@ -15,7 +15,7 @@ group by state
 order by count_of_5_stars DESC
 ```
 
-![An-analysis-of-yelp_business](Group6Visualizations/q1)
+![An-analysis-of-yelp_business](Group6Visualizations/q1.png)
 
 
 
