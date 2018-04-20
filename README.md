@@ -42,3 +42,49 @@ limit 50
 ```
 
 ![An-analysis-of-yelp_business](Group6Visualizations/q3.png)
+
+## Question #4
+What are the top category businesses most people review for?
+
+```sql
+Select sum(review_count) as total_reviews, categories
+From datasets.yelp_business
+Group by categories
+Order by total_reviews DESC
+Limit 5
+```
+
+![An-analysis-of-yelp_business](Group6Visualizations/q4.png)
+
+## Question #5
+What are the most one star review business from yelp?
+
+```sql
+SELECT name,stars, review_count
+FROM datasets.yelp_business
+where stars=1
+group by name, stars, review_count
+limit 10
+```
+
+![An-analysis-of-yelp_business](Group6Visualizations/q5.png)
+
+## Question #6
+How many businesses are open?
+
+```sql
+SELECT count(is_open) as business_open
+from datasets.yelp_business
+where is_open = 1
+```
+
+## Question #7
+What is the average stars of each states?
+
+```sql
+Select  AVG(stars) as average_stars, state
+From datasets.yelp_business
+group by state
+```
+
+
