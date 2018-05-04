@@ -119,7 +119,7 @@ limit 10
 This table includes the amount of check-ins each business has and when that check-in was. Check-ins are offer rewards that businesses give customers they “check-in” to the business on Yelp. By using the check-in feature on the Yelp, customers broadcast to their friends on Yelp that they're at your business.
 
 ## Quesition #10
-What are the top 5 business with most check in?
+What are the top 5 business with the most check-ins?
 
 ```sql
 SELECT business_id,
